@@ -1,0 +1,38 @@
+<!-- Start presentacion-->
+<div id="home" class="parallax">
+    <div id="full-width" class="owl-carousel owl-theme home-hero">
+        <div class="text-center item slider-01 display-table overlay">
+            <div class="display-table-cell" style="padding-top: 5px;padding-bottom: 5px;">
+                <div class="form-container">
+                    <div class="card col-md-10">
+                        
+                        <div class="card-body">
+                            <p class="title">Reporte de citas</p>
+                            <button  class="btn btn-secondary btn-block" (click)="exportAsXLSX()">Exportar a excel</button>                          
+                            <table class="table table-dark">
+                                <tr>
+                                    <th>idReserva</th>
+                                    <th>Descripcion</th>
+                                    <th>Cliente</th>
+                                    <th>Barbero</th>
+                                    <th>Cita</th>
+                                    <th>Estado</th>
+                                </tr>
+                                <tr *ngFor="let item of data" class="contenido">
+                                    <td>{{item.idReserva}}</td>
+                                    <td>{{item.description}}</td>
+                                    <td>{{item.client}}</td>
+                                    <td>{{item.barber}}</td>
+                                    <td>{{item.date}}</td>
+                                    <td>{{item.state}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End presentacion-->
+

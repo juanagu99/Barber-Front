@@ -1,0 +1,61 @@
+<div class="app-component-conatiner">
+<!-- Start header -->
+<header class="top-navbar">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="/" *ngIf="!currentUser()">
+				<img src="../../../assets/logo.png" alt="" />
+            </a>
+            <a class="navbar-brand" *ngIf="currentUser()">
+				<img src="../../../assets/logo.png" alt="" />
+			</a>
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="icon-bar top-bar"></span>
+				<span class="icon-bar middle-bar"></span>
+				<span class="icon-bar bottom-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbars-rs-food">
+				<ul class="navbar-nav ml-auto">
+                    <!--Para todos los tipos de usuarios-->
+                    <li class="nav-item active" *ngIf="!currentUser()" ><a class="nav-link" href="/">Inicio</a></li>
+                    <!--Para todos los tipos de usuarios-->
+                    <li class="nav-item active" *ngIf="currentUser()" ><a class="nav-link" href="/main">Mi usuario</a></li>
+                    <!--Para los clientes-->
+                    <li class="nav-item active" *ngIf="currentUser()"><a class="nav-link" href="/reserve">Reservar citas</a></li>
+                    <!--Para los clientes-->
+                    <li class="nav-item active" *ngIf="validateUserTypeBarber()"><a class="nav-link" href="/dating-history">Historial de citas</a></li>
+                    <!--Para todos los tipos de usuarios-->
+                    <li class="nav-item active" *ngIf="validateUserType()"><a class="nav-link" href="/create-barber">Crear Barbero</a></li>
+                    <!--Para todos los tipos de usuarios-->
+                    <li class="nav-item active" *ngIf="validateUserType()"><a class="nav-link" href="/report">Generar reporte</a></li>        
+                    <!--Para todos los tipos de usuarios-->
+                    <li class="nav-item active" *ngIf="!currentUser()"><a class="nav-link" href="/register">Registrate</a></li>
+                    <!--Para todos los tipos de usuarios-->
+                    <li class="nav-item active" *ngIf="!currentUser()"><a class="nav-link" href="/login">Inicia sesión</a></li>
+                    <!--Para todos los tipos de usuarios-->
+                    <li class="nav-item active" *ngIf="currentUser()"><a (click)="logout()" class="nav-link" href="/">Salir 🏃‍♂</a></li> 
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+<!-- End header -->
+    <router-outlet>
+    </router-outlet>
+
+<!-- Start copyrights -->
+<div class="copyrights">
+   <div class="container">
+      <div class="footer-distributed">
+         <div class="footer-left">
+            <p class="footer-links">
+               <a href="#">Home</a>
+               <a href="#">Contact</a>
+            </p>
+            <p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#">StyleBarber</a></p>
+         </div>
+      </div>
+   </div><!-- end container -->
+</div>
+<!-- End copyrights -->
+</div>

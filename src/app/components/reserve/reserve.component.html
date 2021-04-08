@@ -1,0 +1,43 @@
+<!-- Start presentacion-->
+<div id="home" class="parallax">
+    <div id="full-width" class="owl-carousel owl-theme home-hero">
+        <div class="text-center item slider-01 display-table overlay">
+            <div class="display-table-cell">
+                <div class="form-container">
+                    <div class="card col-md-6">
+                        <div class="card-body">
+                            <p class="title">Reservas</p>
+                            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+                                <div class="form-group ">
+                                    <label for="client">Nombre del cliente*</label>
+                                    <input id="client" type="text" class="form-control" formControlName="client">
+                                </div>
+                                <div class=" form-group ">
+                                    <label for="description">Descripcion del servicio*</label>                                    
+                                    <select type="description" class="form-control" formControlName="description" class="form-control" id="exampleFormControlSelect1">
+                                        <option class="list-group-item list-group-item-action">Afeitado</option>
+                                        <option class="list-group-item list-group-item-action">Mascarillas faciales</option>
+                                        <option class="list-group-item list-group-item-action">Cortes de cabello</option>
+                                    </select>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="barber">Barbero*</label>
+                                    <input id="barber" type="barber" class="form-control" formControlName="barber">
+                                </div>   
+                                <div class="form-group ">
+                                    <label for="date">Horario cita*</label>
+                                    <input type="datetime-local" id="date" name="meeting-time" value="2018-06-12T19:30"
+                                        min="2018-06-07T00:00" max="2018-06-14T00:00" formControlName="date" class="form-control">
+                                </div> 
+                                <div class="buttons-container ">
+                                    <button  (click)="reload()" type="submit " class="btn-block btn-dark ">Confirmar reserva</button>
+                                </div>                    
+                            </form>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End presentacion-->
