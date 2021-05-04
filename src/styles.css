@@ -19,7 +19,7 @@ html {
 -------------------------------------------------------------------*/
 
 body {
-    color: #333;
+    color: #C5C5C5;
     font-size: 15px;
     font-family: 'Titillium Web', sans-serif;
     line-height: 1.80857;
@@ -300,6 +300,10 @@ a img.aligncenter {
     HEADER
 -------------------------------------------------------------------*/
 
+.bare-dark {
+    background-color: #000000!important;
+}
+
 .top-add{
 	background: #ed2d46;
 	border: none;
@@ -328,8 +332,8 @@ a img.aligncenter {
 	position: fixed;
 	width: 100%;
 	top: 0;
-	-webkit-box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
-	box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 0px 18px 1px rgba(183, 57, 57, 0.1);
+	box-shadow: 0px 0px 18px 1px rgba(255, 6, 6, 0.1);
     transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -338,11 +342,11 @@ a img.aligncenter {
 .top-navbar .navbar-light .navbar-nav .nav-link{
 	position: relative;
 	padding: 10px 20px;
-	color: #ffffff;
+	color: #000000;
 }
 .top-navbar .navbar-light .navbar-nav .nav-link::after {
 	content: "";
-    background: #ed2d46;
+    background: #a19161;
     z-index: -1;
     width: 10px;
     height: 10px;
@@ -356,8 +360,10 @@ a img.aligncenter {
 	font-weight: 700;
 }
 .top-navbar .navbar-light .navbar-nav .nav-item{	
-	background: #010101;
+	background:#C5C5C5;
 	position: relative;
+    border-radius: 8px;
+    margin:5px;
 	z-index: 0;
 }
 .top-navbar .navbar-light .navbar-nav .nav-link:hover::after {
@@ -387,7 +393,7 @@ a img.aligncenter {
 }
 
 .navbar-toggler .icon-bar {
-	background: #010101;
+	background: #C5C5C5;
 	transition: all 0.2s;
 	width: 0 auto;
 	width: 25px;
@@ -1228,44 +1234,6 @@ body.barber_version .about-tab .nav-pills > li a:hover{
 
 .service-widget p {
     margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.message-box{
-	background: url(./assets/uploads/about-bg.jpg) no-repeat center;
-	background-size: cover;
-	padding: 40px 0px;
-}
-
-.message-box h4 {
-    text-transform: uppercase;
-    padding: 0;
-    margin: 0 0 5px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    font-size: 15px;
-    color: #999;
-}
-
-.message-box h2 {
-    font-size: 38px;
-    font-weight: 600;
-    padding: 0 0 10px;
-    margin: 0;
-    line-height: 62px;
-    margin-top: 0;
-    text-transform: none;
-}
-
-.message-box p {
-    margin-bottom: 20px;
-}
-
-.message-box .lead {
-    padding-top: 10px;
-    font-size: 19px;
-    font-style: normal;
-    color: #ed2d46;
     padding-bottom: 0;
 }
 
@@ -2508,7 +2476,7 @@ body.barber_version .dev-list .widget:hover .hover-br .social-up-hover .footer-s
   left: 0;
   width: 0%;
   height: 5px;
-  background-color: #ed2d46;
+  background-color: #a19161;
   transition: 0.5s;
 }
 .card:hover {
@@ -2560,29 +2528,4 @@ body.barber_version .dev-list .widget:hover .hover-br .social-up-hover .footer-s
 	padding: 15px 0px;
 	font-weight: 700;
 	font-size: 20px;
-}
-
-.line-pricing{
-	padding: 0px 15px;
-	margin-bottom: 20px;
-}
-
-.line-pricing h5{
-	font-size: 14px;
-	font-weight: 600;
-	border-bottom: 1px dashed #010101;
-}
-.line-pricing p{
-	font-size: 12px;
-	margin: 0px;
-	padding-bottom: 5px;
-}
-.line-pricing a{
-	background: #ed2d46;
-	color: #ffffff;
-	border-radius: 2px;
-	padding: 2px 5px;
-}
-.line-pricing a:hover{
-	color: #010101 !important;
 }

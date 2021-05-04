@@ -14,7 +14,7 @@
 -------------------------------------------------------------------*/
 
 body {
-    color: #333;
+    color:#C5C5C5;
     font-size: 15px;
     font-family: 'Titillium Web', sans-serif;
     line-height: 1.80857;
@@ -436,7 +436,7 @@ a img.aligncenter {
 }
 .home-hero .big-tagline h2{
 	font-size: 48px;
-	color: #ffffff;
+	color: #C5C5C5;
 	padding: 20px 0px;
 }
 
@@ -547,11 +547,11 @@ a img.aligncenter {
 }
 
 .section.wb {
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 .section.lb {
-    background-color: #f2f3f5;
+    background-color: #C5C5C5;
 }
 
 .section.db {
@@ -886,8 +886,8 @@ a img.aligncenter {
 .desc {
     padding: 30px;
     position: relative;
-    background: #ed2d46;
-    border: 1px solid #ed2d46;
+    background: #a19161;
+    border: 1px solid #a19161;
 	border-radius: 2px;
 	text-align: right;
 }
@@ -1088,7 +1088,8 @@ a img.aligncenter {
 .nav-pills > li > a {
     margin: 0!important;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #C5C5C5;
+    color: #000;
 }
 
 .about-tab .nav-tabs{
@@ -1111,13 +1112,13 @@ a img.aligncenter {
 
 body.barber_version .about-tab .nav-pills > li a:hover{
 	color: #ffffff;
-	background: #111111;
+	background: #000;
 	border: none;
 }
 .about-tab .nav-pills > li > a.active{
 	border: none;
-	background: #ed2d46;
-	color: #ffffff;
+	background: #C5C5C5;
+	color: #000;
 }
 
 .about-tab .tab-content > .tab-pane{
@@ -1227,8 +1228,6 @@ body.barber_version .about-tab .nav-pills > li a:hover{
 }
 
 .message-box{
-	background: url(../../../assets/uploads/about-bg.jpg) no-repeat center;
-	background-size: cover;
 	padding: 40px 0px;
 }
 
@@ -1239,7 +1238,7 @@ body.barber_version .about-tab .nav-pills > li a:hover{
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 15px;
-    color: #999;
+    color: #C5C5C5;
 }
 
 .message-box h2 {
@@ -1250,6 +1249,7 @@ body.barber_version .about-tab .nav-pills > li a:hover{
     line-height: 62px;
     margin-top: 0;
     text-transform: none;
+    color:#C5C5C5
 }
 
 .message-box p {
@@ -1260,7 +1260,7 @@ body.barber_version .about-tab .nav-pills > li a:hover{
     padding-top: 10px;
     font-size: 19px;
     font-style: normal;
-    color: #ed2d46;
+    color: #C5C5C5;
     padding-bottom: 0;
 }
 
@@ -1276,7 +1276,7 @@ body.barber_version .about-tab .nav-pills > li a:hover{
 
 .playbutton {
     position: absolute;
-    color: #ffffff !important;
+    color: #C5C5C5 !important;
     top: 40%;
     font-size: 60px;
     z-index: 12;
@@ -1999,10 +1999,14 @@ select.mobile-device {
 }
 
 .footer .widget-title small {
-    color: #999;
+    color: #000000;
     display: block;
     padding: 0 58px;
     text-transform: uppercase;
+}
+
+.p_dark{
+    color:#000000;
 }
 
 .footer .widget-title h3 {
@@ -2287,9 +2291,9 @@ select.mobile-device {
 .btn-light {
     padding: 13px 40px;
     font-size: 18px;
-    border: 2px solid #ffffff;
+    border: 2px solid #C5C5C5;
     border-radius: 50px;
-    color: #ffffff;
+    color: #000000;
     display: inline-block;
     font-size: 13px;
     font-weight: 500;
@@ -2503,7 +2507,7 @@ body.barber_version .dev-list .widget:hover .hover-br .social-up-hover .footer-s
   left: 0;
   width: 0%;
   height: 5px;
-  background-color: #ed2d46;
+  background-color: #a19161;
   transition: 0.5s;
 }
 .card:hover {
@@ -2573,7 +2577,7 @@ body.barber_version .dev-list .widget:hover .hover-br .social-up-hover .footer-s
 	padding-bottom: 5px;
 }
 .line-pricing a{
-	background: #ed2d46;
+	background: #a19161;
 	color: #ffffff;
 	border-radius: 2px;
 	padding: 2px 5px;
