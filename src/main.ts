@@ -7,8 +7,10 @@ import { environment } from './environments/environment';
 if (environment.production) {
   enableProdMode();
   console.log("ambiente de producción");
+  console.log("url:"+environment.url_service);
 }else{
   console.log("ambiente de desarrollo");
+  console.log("url:"+environment.url_service);
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
