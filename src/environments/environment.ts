@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url_service: 'https://baber-backend.vercel.app/'
+  url_service: 'https://baber-backend.vercel.app'
 };
 
 /*
