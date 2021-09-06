@@ -1,6 +1,7 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 import * as FileSaver from 'file-saver';
 import * as XLSX from 'xlsx';
@@ -25,7 +26,8 @@ export class ReportComponent implements OnInit {
   }
 
   async llamadoApi() {
-     await fetch('http://localhost:3001/getReservas')
+    let url= environment.url_service;
+     await fetch(url + '/getReservas')
       .then(response => response.json())
       .then(data => {
         console.log('data', data.reservas);
@@ -34,7 +36,7 @@ export class ReportComponent implements OnInit {
   }
 
   async changeState(item){
-    let url = `http://localhost:3001/updateState`;
+    let url = environment.url_service + `/updateState`;
       let response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify({
