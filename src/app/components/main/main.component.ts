@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-main',
@@ -28,8 +27,7 @@ export class MainComponent implements OnInit{
   }
 
   async getUser() {
-    let url = environment.url_service + '/getUser?email=';
-    await fetch(url+ localStorage.getItem('email') )
+    await fetch('http://localhost:3001/getUser?email='+ localStorage.getItem('email') )
      .then(response => response.json())
      .then(data => {            
        this.data = data;  
@@ -40,7 +38,7 @@ export class MainComponent implements OnInit{
   async onSubmit(userData) {
     console.log('entra en el onSubmit');
     console.log('---Data: ', userData);
-    let url = environment.url_service + `/updateUser`;
+    let url = `http://localhost:3001/updateUser`;
     let response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify({

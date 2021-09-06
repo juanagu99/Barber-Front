@@ -5,7 +5,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { HttpClientService } from 'src/app/services/http-client.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-reserve',
@@ -35,8 +34,7 @@ export class ReserveComponent implements OnInit {
   }
 
   async llamadoApi() {
-    let url= environment.url_service;
-    await fetch(url + '/getAllUsers')
+    await fetch('http://localhost:3001/getAllUsers')
       .then(response => response.json())
       .then( response  => {
         let lista : Users[] = response.data

@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Subscription } from 'rxjs';
 import { HttpClientService } from '../../services/http-client.service'
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { environment } from 'src/environments/environment';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +29,7 @@ export class LoginComponent {
     console.log('entra en el onSubmit');
     console.log('---Data: ', userData);
     if (userData.email && userData.password) {
-      let url =environment.url_service + `/login`;
+      let url = `http://localhost:3001/login`;
       let response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify({

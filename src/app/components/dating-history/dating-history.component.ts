@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { dateInterface } from 'src/app/interface/date-interface';
 import { HttpClientService } from 'src/app/services/http-client.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-dating-history',
@@ -24,8 +23,7 @@ export class DatingHistoryComponent implements OnInit {
   }
 
   async llamadoApi() {
-    let url = environment.url_service+`/getReservas`;
-    await fetch(url)
+    await fetch('http://localhost:3001/getReservas')
       .then(response => response.json())
       .then(data => {
         console.log('data', data.reservas);
@@ -34,7 +32,7 @@ export class DatingHistoryComponent implements OnInit {
   }
 
   async changeState(item) {
-    let url = environment.url_service+`/updateState`;
+    let url = `http://localhost:3001/updateState`;
     let response = await fetch(url, {
       method: 'POST',
       body: JSON.stringify({

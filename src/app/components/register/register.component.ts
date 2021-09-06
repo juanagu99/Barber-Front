@@ -4,7 +4,6 @@ import { Subscription } from 'rxjs';
 import { HttpClientService } from '../../services/http-client.service'
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-
 @Component({ 
   selector: 'app-register',
   templateUrl: './register.component.html',
