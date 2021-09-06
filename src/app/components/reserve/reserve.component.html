@@ -8,9 +8,13 @@
                         <div class="card-body">
                             <p class="title">Reservas</p>
                             <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-                                <div class="form-group ">
-                                    <label for="client">Nombre del cliente*</label>
-                                    <input id="client" type="text" class="form-control" formControlName="client">
+                                <div class="form-group" *ngIf="validateUserType()">
+                                    <label for="client">Correo del cliente*</label>
+                                    <input id="client" type="email" class="form-control" [(ngModel)]="user_email" readonly formControlName="email">
+                                </div>
+                                <div class="form-group" *ngIf="!validateUserType()">
+                                    <label for="client">Correo del cliente*</label>
+                                    <input id="client" type="email" class="form-control" formControlName="email">
                                 </div>
                                 <div class=" form-group ">
                                     <label for="description">Descripcion del servicio*</label>                                    
@@ -22,15 +26,24 @@
                                 </div>
                                 <div class="form-group ">
                                     <label for="barber">Barbero*</label>
-                                    <input id="barber" type="barber" class="form-control" formControlName="barber">
+
+                                    <select class="form-control" id="barber" type="barber" formControlName="barber">
+                                        <option value="" selected> 
+                                            Escoja un barbero
+                                        </option>
+                                        <option *ngFor="let item of data" [value]="item.email">
+                                            {{item.fullname}}
+                                        </option>
+                                    </select>
+
                                 </div>   
                                 <div class="form-group ">
                                     <label for="date">Horario cita*</label>
-                                    <input type="datetime-local" id="date" name="meeting-time" value="2018-06-12T19:30"
+                                    <input type="datetime-local" id="date" name="meeting-time"
                                         min="2018-06-07T00:00" max="2018-06-14T00:00" formControlName="date" class="form-control">
                                 </div> 
                                 <div class="buttons-container ">
-                                    <button  (click)="reload()" type="submit " class="btn-block btn-dark ">Confirmar reserva</button>
+                                    <button type="submit " class="btn-block btn-dark ">Confirmar reserva</button>
                                 </div>                    
                             </form>                            
                         </div>

@@ -43,7 +43,7 @@ export class LoginComponent {
         .then(res => res.json())
         .catch(error => {
           console.log('error', error);
-
+          alert('Error');
         })
         .then(response => {
            console.log('response', response); 
@@ -54,6 +54,7 @@ export class LoginComponent {
            localStorage.setItem("userType", response.userData.userType)
            localStorage.setItem("email", response.userData.userEmail)          
            this.router.navigate(["/main"])
+           alert('Login correcto');
           }
         );
     } else {

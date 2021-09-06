@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import {Reserva} from '../class/reservas'
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,7 @@ export class HttpClientService {
   }
 
   public newReserve(body) {
-    return this.http.post(`${this.URL_BASE}/newReserva`,body).pipe(map(data=>data));
+    return this.http.post(`${this.URL_BASE}/newReserva`,body).pipe(map( data => data));
   }
   
 }

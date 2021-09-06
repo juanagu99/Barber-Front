@@ -19,7 +19,7 @@
                                 <tr *ngFor="let item of data" class="contenido">
                                     <td *ngIf="item.state !== 'done'">{{item.idReserva}}</td>
                                     <td *ngIf="item.state !== 'done'">{{item.description}}</td>
-                                    <td *ngIf="item.state !== 'done'">{{item.client}}</td>
+                                    <td *ngIf="item.state !== 'done'">{{item.email}}</td>
                                     <td *ngIf="item.state !== 'done'">{{item.barber}}</td>
                                     <td *ngIf="item.state !== 'done'">{{item.date}}</td>
                                     <td *ngIf="item.state !== 'done'">{{item.state}}</td>
