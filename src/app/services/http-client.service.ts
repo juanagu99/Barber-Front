@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import {Reserva} from '../class/reservas'
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpClientService {
-  private URL_BASE = 'http://localhost:3001'
+  private URL_BASE = environment.url_service
+  
   constructor(private http: HttpClient) { }
 
   public login(body) {

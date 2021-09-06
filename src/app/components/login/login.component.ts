@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { HttpClientService } from '../../services/http-client.service'
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { $ } from 'protractor';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +30,7 @@ export class LoginComponent {
     console.log('entra en el onSubmit');
     console.log('---Data: ', userData);
     if (userData.email && userData.password) {
-      let url = `http://localhost:3001/login`;
+      let url =environment.url_service + `/login`;
       let response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify({
