@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url_service: 'http://localhost:3001'
+  url_service: 'https://baber-backend.vercel.app/'
 };
 
 /*
